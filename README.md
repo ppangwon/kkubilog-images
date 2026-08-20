@@ -1,17 +1,27 @@
 # 꾸비로그 이미지
 
 블로그(kkubilog.com)에 실리는 이미지의 원본입니다. 이 저장소가 공개인 이유는
-하나뿐입니다 — **Blogger 가 글을 저장할 때 외부 이미지 주소를 읽어 자기 서버로
-가져가기 때문**입니다(`fetchImages`). 발행이 끝나면 블로그는 이 주소를 더
-호출하지 않습니다.
+하나뿐입니다 — **발행된 글이 이 이미지 주소를 계속 가리키기 때문**입니다.
+독자가 글을 열 때마다 여기서 이미지를 받아갑니다. 발행이 끝나면 안 쓰는 게
+아니라 **그때부터 씁니다.** 지우면 글의 이미지가 전부 깨집니다.
+
+> ⚠️ 2026-08-20 정정. 그전까지 이 문서는 "Blogger 가 저장할 때 외부 이미지를
+> 자기 서버로 가져간다(`fetchImages`)" 고 적고 있었습니다. **틀렸습니다.**
+> `fetchImages` 는 실존하는 파라미터가 맞지만 하는 일이 다릅니다 — 응답에
+> `images: [{url}]` 목록을 끼워줄 뿐이고 이미지를 옮기지 않습니다.
+> `posts.get(fetchImages=True)` 로 직접 확인했습니다.
 
 코드와 원고는 별도의 비공개 저장소(`kkubilog-automation`)에 있습니다.
 
 ## 주소 규칙
 
 ```
-https://raw.githubusercontent.com/ppangwon/kkubilog-images/main/images/<파일명>
+https://images.kkubilog.com/<파일명>
 ```
+
+Cloudflare Workers 정적 자산으로 배포합니다 (`wrangler.jsonc`). `main` 에
+푸시하면 자동으로 배포됩니다. 응답 헤더(캐시 30일)는 `images/_headers` 에
+있습니다.
 
 ## 출처
 
