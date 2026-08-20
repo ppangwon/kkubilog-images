@@ -1,0 +1,20 @@
+{
+  // 꾸비로그 이미지 호스팅 (2026-08-20)
+  //
+  // 이 저장소는 발행된 글이 가리키는 이미지의 **영구 호스팅**입니다.
+  // Cloudflare Workers 정적 자산으로 배포합니다.
+  //
+  // 왜 Pages 가 아니라 Workers 인가: 이 계정 대시보드에 Pages 신규 생성
+  // 항목이 없습니다 (Create application 을 누르면 Workers 흐름만 나옵니다).
+  // 하는 일은 같습니다 — 폴더 하나를 CDN 에 얹는 것.
+  //
+  // Worker 스크립트(main)는 없습니다. 파일만 서빙하면 되고, 코드가 없으면
+  // 고장날 것도 없습니다.
+  //
+  // 응답 헤더(캐시)는 images/_headers 에서 정합니다.
+  "name": "kkubilog-images",
+  "compatibility_date": "2026-08-20",
+  "assets": {
+    "directory": "./images/"
+  }
+}
