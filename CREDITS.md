@@ -12,3 +12,4 @@ Pexels 라이선스는 상업적 이용·수정이 자유롭고 출처 표기 �
 - `didimdol-mihon-02-bigyo.jpg` — Diana ✨ (https://www.pexels.com/photo/modern-apartment-buildings-9170385/)
 - `didimdol-seoryu-01-sedae.jpg` — RDNE Stock project (https://www.pexels.com/photo/photo-of-employment-contract-7841410/)
 - `didimdol-seoryu-02-jasan.jpg` — Dziana Hasanbekava (https://www.pexels.com/photo/coins-scattered-on-wooden-surface-7063762/)
+- `naeilbaeum-08-hunryeon.jpg` — RDNE Stock project (https://www.pexels.com/photo/a-person-writing-while-holding-a-cup-of-coffee-5921570/)
